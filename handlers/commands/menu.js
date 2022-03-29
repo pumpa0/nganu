@@ -8,8 +8,8 @@ const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
 
 const defaultMenu = {
-    before: `Hi *%pushname* 🤗\nYour Device is : *%device* 
-*'${package.name}'* ~> coded by ${package.author}
+    before: `Hi *%pushname*
+*DownBotz* ~> coded by Han
 
 ⌚️ : ${moment().format('HH:mm:ss')}
 📅 : ${pasaran().hijriyah}
@@ -80,15 +80,13 @@ module.exports = {
         ].join('\n')
 
         const buttonsDefault = [
-            { urlButton: { displayText: `🍴 Source Code`, url: package.repository.url } },
-            { urlButton: { displayText: `💌 Telegram Bot`, url: `https://t.me/tikdl_bot` } },
-            { quickReplyButton: { displayText: `☎ Owner`, id: `${prefix}owner` } },
+            { quickReplyButton: { displayText: `Owner`, id: `${prefix}owner` } },
         ]
         client.sendMessage(m.chat, {
             caption: _text,
             footer: global.footer,
             templateButtons: buttonsDefault,
-            location: { jpegThumbnail: (await getBuffer('./src/logo.jpg')).buffer, name: `${package.name}` },
+            location: { jpegThumbnail: (await getBuffer('./src/hisoka.jpg')).buffer, name: `${package.name}` },
             headerType: 4
         }, { quoted: m })
     }
