@@ -10,11 +10,7 @@ const readMore = more.repeat(4001)
 const defaultMenu = {
     before: `Hi *%pushname*
 
-Bot social media downloader
-kirimkan link yg ingin di download & tunggu bot memproses
-
-*Supported links :*
-%links
+_fitur download masih error_
 
 %readmore`.trimStart(),
     header: '*%category*',
