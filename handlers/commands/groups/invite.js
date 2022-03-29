@@ -16,7 +16,7 @@ module.exports = {
                     m.reply('private')
                     const inviteCode = await client.groupInviteCode(m.chat)
                     let thumb;
-                    try { thumb = await client.profilePictureUrl(m.chat, 'image') } catch (e) { thumb = './src/logo.jpg' }
+                    try { thumb = await client.profilePictureUrl(m.chat, 'image') } catch (e) { thumb = './src/hisoka.jpg' }
                     await client.sendGroupV4Invite(m.chat, _user, inviteCode, moment().add('3', 'days').unix(), false, thumb)
                     m.reply('inviting...')
                 }
