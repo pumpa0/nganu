@@ -9,17 +9,13 @@ const readMore = more.repeat(4001)
 
 const defaultMenu = {
     before: `Hi *%pushname*
-*DownBotz* ~> coded by Han
-
-⌚️ : ${moment().format('HH:mm:ss')}
-📅 : ${pasaran().hijriyah}
-📆 : ${pasaran().jawa}
 
 Bot social media downloader
 kirimkan link yg ingin di download & tunggu bot memproses
 
 *Supported links :*
 %links
+
 %readmore`.trimStart(),
     header: '*%category*',
     body: '• %cmd %opts%args %flags',
