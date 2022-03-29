@@ -15,7 +15,7 @@ module.exports = {
         mtime = new Date(mulai.mtime)
         now = new Date()
         let check = await isLatestVersion()
-        let text = `💻 *Bot Information*
+        let text = `*Bot Information*
 • Bot Status : 🟢 Online
 • Bot Version : ${check.version} is Latest ${check.isLatest}
 • Latency : ${processTime(client.timestamp, moment())} _ms_
@@ -26,7 +26,7 @@ module.exports = {
 • AutoRead MSG : ${config.autoRead ? '✅' : '❌'}
 • AutoTyping (_mengetik..._) : ${config.composing ? '✅' : '❌'}
 
-🌡 *Bot Statistics* :
+*Bot Statistics* :
 - Message Received : ${stats.msgRecv}
 - Message Sent : ${stats.msgSent}
 - Command HIT : ${stats.cmd}
@@ -35,9 +35,9 @@ module.exports = {
 - Filesize Sent : ${humanFileSize(stats.filesize, true)}
 `
         const btn = [
-            { quickReplyButton: { displayText: `🧪 Features`, id: `${prefix}menu` } },
-            { quickReplyButton: { displayText: `🧪 Group Bot`, id: `${prefix}groupbot` } },
-            { urlButton: { displayText: `🎨 Instagram`, url: `https://www.instagram.com/mg.bot` } },
+            { quickReplyButton: { displayText: `Menu`, id: `${prefix}menu` } },
+            { quickReplyButton: { displayText: `Group Bot`, id: `${prefix}groupbot` } },
+            { urlButton: { displayText: `Instagram`, url: `https://www.instagram.com/terserah_bomat` } },
         ]
         client.sendMessage(m.chat, { text, footer: global.footer, templateButtons: btn }, { quoted: m })
     }
