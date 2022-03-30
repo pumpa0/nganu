@@ -19,7 +19,7 @@ module.exports = {
                 }
             } else if (m.quoted && m.quoted.mtype == 'stickerMessage') {
                 const removed = await Sticker.removeBG(await m.quoted.download())
-                const data = new Sticker(removed, { packname: `${package.name} #${stats.sticker}`, author: package.author })
+                const data = new Sticker(removed, { packname: `Han`, author: package.author })
                 await client.sendMessage(from, await data.toMessage(), { quoted: m })
                 statistics('sticker')
             } else {
