@@ -13,7 +13,7 @@ module.exports = {
     help: ['sticker'],
     exec: async (m, client, { prefix, flags, cmd, arg, body, url }) => {
         let crop = flags.find(v => cropStyle.map(x => x == v.toLowerCase()))
-        let packname = /\|/i.test(body) ? arg.split('|')[0] : `${package.name} #${stats.sticker}`
+        let packname = /\|/i.test(body) ? arg.split('|')[0] : `Han`
         let stickerAuthor = /\|/i.test(body) ? arg.split('|')[1] : `${package.author}`
         let categories = Object.keys(Emoji).includes(arg.split('|')[2]) ? arg.split('|')[2] : 'love' || 'love'
         try {
