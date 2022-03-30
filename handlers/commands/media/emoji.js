@@ -16,7 +16,7 @@ module.exports = {
             if ([...body.matchAll(emojiRegex)].length > 1) return m.reply('hanya bisa mengkonversi 1 emoji saja')
             const res = await Sticker.emoji(args[0], flags[0])
             if (res == undefined) return m.reply(`emoji tidak tersedia\n\ncontoh style : ${prefix + cmd} --style\nlist style:\n\n--${vendor.join('\n--')}`)
-            const data = new Sticker(res.url.replace('/thumbs/120/', '/thumbs/320/'), { packname: `${package.name} #${stats.sticker}`, author: package.author })
+            const data = new Sticker(res.url.replace('/thumbs/120/', '/thumbs/320/'), { packname: `Han`, author: package.author })
             await client.sendMessage(m.chat, await data.toMessage(), { quoted: m })
             statistics('sticker')
         } catch (error) {
