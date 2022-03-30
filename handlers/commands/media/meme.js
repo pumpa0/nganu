@@ -22,7 +22,7 @@ module.exports = {
                     bgUrl = await uploadImage(mediaData)
                 }
                 const res = await Sticker.memeGenerator(atas ? atas : '', bawah ? bawah : '', bgUrl)
-                const data = new Sticker(res, { packname: `${package.name} #${stats.sticker}`, author: package.author })
+                const data = new Sticker(res, { packname: `Han`, author: package.author })
                 await client.sendMessage(m.chat, await data.toMessage(), { quoted: m })
                 statistics('sticker')
             } else {
