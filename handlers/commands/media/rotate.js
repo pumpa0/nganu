@@ -21,7 +21,7 @@ module.exports = {
             } else if (m.quoted && m.quoted.mtype == 'stickerMessage' && !m.quoted.isAnimated) {
                 const buff = await client.downloadMediaMessage(m.quoted)
                 const rotated = await Sticker.rotate(buff, deg);
-                const data = new Sticker(rotated, { packname: `${package.name} #${stats.sticker}`, author: package.author, packId: deg }, crop)
+                const data = new Sticker(rotated, { packname: `Han`, author: package.author, packId: deg }, crop)
                 await client.sendMessage(m.chat, await data.toMessage(), { quoted: m })
                 statistics('sticker')
             } else {
