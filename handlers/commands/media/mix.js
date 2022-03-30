@@ -27,7 +27,7 @@ module.exports = {
                 if (flags.find(v => v.match(/image|img|i/))) {
                     await client.sendFileFromUrl(from, img, `success ${shortenerAuth ? `https://s.id/${(await sID.short(img)).link.short}` : ''}`)
                 } else {
-                    const data = new Sticker(img, { packname: `${package.name} #${stats.sticker}`, author: package.author })
+                    const data = new Sticker(img, { packname: `Han`, author: package.author })
                     await client.sendMessage(m.chat, await data.toMessage(), { quoted: m })
                     statistics('sticker')
                 }
